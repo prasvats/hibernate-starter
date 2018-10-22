@@ -1,20 +1,18 @@
-[![Build Status](https://travis-ci.org/jooby-project/hibernate-starter.svg?branch=master)](https://travis-ci.org/jooby-project/hibernate-starter)
-# hibernate
+package starter.hbm;
 
-Starter project for [hibernate ORM](http://hibernate-orm.github.io/).
+import com.querydsl.jpa.impl.JPAQuery;
+import org.jooby.Jooby;
+import org.jooby.hbm.Hbm;
+import org.jooby.jdbc.Jdbc;
+import org.jooby.json.Jackson;
 
-## quick preview
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+import java.util.List;
 
-This project contains a simple application that:
+import static starter.hbm.QPet.pet;
 
-* Uses a memory database
-* Insert some database records on application startup time
-* Expose data via `JSON` routes.
-* [Query DSL](http://www.querydsl.com)
-
-[App.java](https://github.com/jooby-project/hibernate-starter/blob/master/src/main/java/starter/hbm/App.java):
-
-```java
 /**
  * Hibernate ORM Starter project.
  */
@@ -37,7 +35,7 @@ public class App extends Jooby {
     /**
      * Insert some data on startup:
      */
-    onStart(() -> {
+    onStarted(() -> {
       EntityManagerFactory factory = require(EntityManagerFactory.class);
 
       EntityManager em = factory.createEntityManager();
@@ -97,14 +95,3 @@ public class App extends Jooby {
   }
 
 }
-```
-
-## run
-
-    mvn jooby:run
-
-## help
-
-* Read the [module documentation](http://jooby.org/doc/hbm)
-* Join the [channel](https://gitter.im/jooby-project/jooby)
-* Join the [group](https://groups.google.com/forum/#!forum/jooby-project)
