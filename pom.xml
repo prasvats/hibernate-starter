@@ -92,7 +92,7 @@
                 </auth>
             </from>
             <to>
-                <image>prasvats/jib:${env.JIB_VERSION}</image>
+                <image>prasvats/jib-hibernate:${env.JIB_VERSION}</image>
                 <auth>
                     <username>${env.DOCKER_REPOSITORY_USERNAME}</username>
                     <password>${env.DOCKER_REPOSITORY_PASSWORD}</password>
