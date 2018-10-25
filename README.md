@@ -61,8 +61,11 @@ mvn compile jib:build   // It will build artifact, docker images as well as push
 
 ## Run you application locally 
 1. Non-Docker way 
-  - mvn jooby:run 
-
+```
+  mvn jooby:run 
+```
 2. Dokcer way 
-  - docker pull $DOCKER_REPOSITORY_URL:$JIB_VERSION
-  - docker run -itd -p 8080:8080 $DOCKER_REPOSITORY_URL:$JIB_VERSION
+```
+docker pull $DOCKER_REPOSITORY_URL:$JIB_VERSION
+docker run -itd -p 8080:8080 $DOCKER_REPOSITORY_URL:$JIB_VERSION
+```
