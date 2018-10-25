@@ -37,6 +37,7 @@ Jooby applications are self-contained and uses default configuration from **conf
   - we can set application configuration as per our environment and then build the artifact
   - we can also pass AWS RDS endpoint here
   - Insert below code snippet, your Database configuration in  **conf/application.conf**
+  Note: If you have private git repository and you are ok with uploading conf to github then you can remove **conf/application.conf** from .gitignore 
 ```
 #add or overide database config
 db.url = "jdbc:mysql://localhost:9015/test"
