@@ -70,3 +70,7 @@ mvn compile jib:build   // It will build artifact, docker images as well as push
 docker pull $DOCKER_REPOSITORY_URL:$JIB_VERSION
 docker run -itd -p 8080:8080 $DOCKER_REPOSITORY_URL:$JIB_VERSION
 ```
+
+## Terraform
+- You can refer terraform script to launch RDS intsnace in you VPC
+- Refer Link : [Terraform](https://github.com/prasvats/terraform/tree/master/VPN-ALB-ECS/module/rds)
