@@ -78,7 +78,6 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-shade-plugin</artifactId>
       </plugin>
-      <!-- Google Jib Plugin---->
       <plugin>
         <groupId>com.google.cloud.tools</groupId>
         <artifactId>jib-maven-plugin</artifactId>
@@ -92,7 +91,7 @@
                 </auth>
             </from>
             <to>
-                <image>prasvats/jib-hibernate:${env.JIB_VERSION}</image>
+                <image>${env.DOCKER_REPOSITORY_URL}:${env.JIB_VERSION}</image>
                 <auth>
                     <username>${env.DOCKER_REPOSITORY_USERNAME}</username>
                     <password>${env.DOCKER_REPOSITORY_PASSWORD}</password>

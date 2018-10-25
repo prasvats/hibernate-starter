@@ -11,6 +11,9 @@ target
 dependency-reduced-pom.xml
 bin
 
+#conf content
+conf/application.conf
+
 # OSX
 *.DS_Store
 
